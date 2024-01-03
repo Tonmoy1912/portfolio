@@ -1,0 +1,26 @@
+
+.profiles{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.profile{
+    margin: 3px;
+}
+.profile img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.profile h3{
+    font-size: 0.7rem;
+    color: rgb(165, 165, 165);
+}
+.profile:hover{
+    font-size: 1.4rem;
+}
+.profiles{
+    width: 24%;
+    margin: auto;
+}
