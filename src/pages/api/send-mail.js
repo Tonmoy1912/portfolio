@@ -22,7 +22,7 @@ export default async function handler(req, res) {
         const emailToSender = {
             body: {
                 name: req.body.name,
-                intro: "Thanks for visiting my portfolio website. Your message has been sent successfully and you will be contacted soon.",
+                intro: `Thanks for visiting my portfolio website. Your message has been sent successfully and you will be contacted soon.<br> <br>Your message:<br>${req.body.message}`,
                 // action: {
                 //     instructions: 'To get started with Mailgen, please click here:',
                 //     button: {
@@ -38,7 +38,7 @@ export default async function handler(req, res) {
         const emailToOwner = {
             body: {
                 name: "Tonmoy biswas",
-                intro: `A user, ${req.body.name}, with email address ${req.body.email} has sent the follow message from your portfolio website.`,
+                intro: `A user, ${req.body.name}, with email address ${req.body.email} has sent the following message from your portfolio website.`,
                 // action: {
                 //     instructions: 'To get started with Mailgen, please click here:',
                 //     button: {
@@ -82,7 +82,7 @@ export default async function handler(req, res) {
         });
         // console.log("Body:", req.body);
 
-        // res.send(emailToOwnerHTML);
+        // res.send(emailToSenderHTML);
 
         res.status(200).json({ ok: true, message: "Message sent successfully." });
     }
